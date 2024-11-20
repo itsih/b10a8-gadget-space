@@ -1,0 +1,194 @@
+[
+    {
+      "product_id": 1,
+      "product_title": "IPhone 15 Pro Max",
+      "product_image": "https://i.ibb.co.com/Htm3TRQ/Apple-i-Phone-15-Pro-1-TB-Storage-8-GB-RAM-3-450x450.jpg",
+      "category": "Phone",
+      "price": 1299,
+      "description": "The ultimate smartphone experience with a powerful A17 Bionic chip and a stunning Dynamic Island display.",
+      "specifications": [
+        "6.7-inch Super Retina XDR display",
+        "A17 Bionic chip",
+        "48MP main camera",
+        "ProRes video recording"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 2,
+      "product_title": "Google Pixel 8 Pro",
+      "product_image": "https://i.ibb.co.com/cwqHTbQ/Pixel-8-Pro.jpg",
+      "category": "Phone",
+      "price": 999,
+      "description": "Experience the latest innovations in smartphone technology with the Pixel 8 Pro.",
+      "specifications": [
+        "6.7-inch Smooth Display",
+        "Tensor G2 chip",
+        "48MP main camera",
+        "Magic Eraser"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 3,
+      "product_title": "Samsung Galaxy S24 Ultra",
+      "product_image": "https://i.ibb.co.com/Y2ydSSZ/Galaxy-S24-Ultra-Titanium-Violet-1052.jpg",
+      "category": "Phone",
+      "price": 1199,
+      "description": "The ultimate Android smartphone with a powerful processor and stunning display.",
+      "specifications": [
+        "6.8-inch Dynamic AMOLED 2X display",
+        "Snapdragon 8 Gen 3 processor",
+        "200MP main camera",
+        "5000mAh battery"
+      ],
+      "availability": false,
+      "rating": 4.9
+    },
+    {
+      "product_id": 4,
+      "product_title": "MacBook Pro 14-inch",
+      "product_image": "https://i.ibb.co.com/JHjNKPV/Macbook-Pro-M1-Chip-3.webp",
+      "category": "Laptop",
+      "price": 1999,
+      "description": "Powerful M2 Pro chip, stunning Liquid Retina XDR display, and all-day battery life.",
+      "specifications": [
+        "14-inch Liquid Retina XDR display",
+        "M2 Pro chip",
+        "16GB unified memory",
+        "1TB SSD storage"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 5,
+      "product_title": "Microsoft Surface Pro 9",
+      "product_image": "https://i.ibb.co.com/9hX0pq8/microsoft-surface-pro-9-core-i7-12th-gen-multi-touch-laptop-550x350h.jpg",
+      "category": "Tablet",
+      "price": 999,
+      "description": "Versatile 2-in-1 device for work and play.",
+      "specifications": [
+        "12th Gen Intel Core processor",
+        "13-inch PixelSense touchscreen",
+        "Dolby Atmos sound system",
+        "Windows 11"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 6,
+      "product_title": "Apple Watch Series 9",
+      "product_image": "https://i.ibb.co.com/3Yw49PF/Apple-Watch-Series-9-Stainless-Steel-Case-GPS-Cellular-Black-7438.jpg",
+      "category": "Watch",
+      "price": 399,
+      "description": "The ultimate smartwatch with advanced health features and stunning design.",
+      "specifications": [
+        "Always-On Retina display",
+        "S9 chip",
+        "Crash Detection",
+        "ECG app"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 7,
+      "product_title": "Samsung Galaxy Watch 6",
+      "product_image": "https://i.ibb.co.com/jLSkn08/Silver-5859.jpg",
+      "category": "Watch",
+      "price": 299,
+      "description": "Track your fitness goals, stay connected, and more with the Galaxy Watch 6.",
+      "specifications": [
+        "1.4-inch AMOLED display",
+        "Exynos W920 processor",
+        "Blood pressure monitoring",
+        "Long-lasting battery life"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 8,
+      "product_title": "iPad Pro 12.9-inch",
+      "product_image": "https://i.ibb.co.com/prB8gK6/ipad.jpg",
+      "category": "Tablet",
+      "price": 1099,
+      "description": "Powerful and versatile tablet for creative professionals.",
+      "specifications": [
+        "Liquid Retina XDR display",
+        "M2 chip",
+        "12MP Ultra Wide front camera",
+        "LiDAR Scanner"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 9,
+      "product_title": "Dell XPS 13",
+      "product_image": "https://i.ibb.co.com/S0g6ctg/Dell.jpg",
+      "category": "Laptop",
+      "price": 1299,
+      "description": "Sleek and powerful laptop with stunning display and long battery life.",
+      "specifications": [
+        "13.4-inch InfinityEdge display",
+        "12th Gen Intel Core processor",
+        "16GB RAM",
+        "512GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 10,
+      "product_title": "Xiaomi Redmi Note 13 Pro+",
+      "product_image": "https://i.ibb.co.com/tQGqs4V/Xiaomi.jpg",
+      "category": "Phone",
+      "price": 399,
+      "description": "Affordable smartphone with impressive performance and features.",
+      "specifications": [
+        "6.7-inch AMOLED display",
+        "Dimensity 1080 processor",
+        "200MP main camera",
+        "5000mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.4
+    },
+    {
+      "product_id": 11,
+      "product_title": "Huawei MateBook X Pro",
+      "product_image": "https://i.ibb.co.com/N9jvwwB/HuaWEI.jpg",
+      "category": "Laptop",
+      "price": 1499,
+      "description": "Premium laptop with stunning display and powerful performance.",
+      "specifications": [
+        "14.2-inch OLED display",
+        "12th Gen Intel Core processor",
+        "16GB RAM",
+        "512GB SSD"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 12,
+      "product_title": "Amazfit GTR 4",
+      "product_image": "https://i.ibb.co.com/3CYhZ68/20220716-1657967764-956267.jpg",
+      "category": "Watch",
+      "price": 199,
+      "description": "Stylish and affordable smartwatch with long battery life and accurate health tracking.",
+      "specifications": [
+        "1.43-inch AMOLED display",
+        "BioTracker 4.0 PPG sensor",
+        "14-day battery life",
+        "5 ATM water resistance"
+      ],
+      "availability": true,
+      "rating": 4.3
+    }
+]

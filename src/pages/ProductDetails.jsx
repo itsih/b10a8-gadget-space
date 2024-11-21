@@ -3,7 +3,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Heading from "../components/Heading";
 import { FaRegHeart } from "react-icons/fa6";
 import { BsCart3 } from "react-icons/bs";
-import { addToCart, addToWishlist, getWishlist,  } from "../utility";
+import { addToCart, addToWishlist, getWishlist } from "../utility";
+import { Helmet } from "react-helmet";
 
 const ProductDetails = () => {
   const data = useLoaderData();
@@ -13,7 +14,7 @@ const ProductDetails = () => {
   // Handling add to cart
   const handleAddToCart = (product) => {
     addToCart(product);
-  }
+  };
   // Handling Add to wishlist
   const handleAddToWishlist = (product) => {
     addToWishlist(product);
@@ -26,12 +27,12 @@ const ProductDetails = () => {
       (product) => product.product_id === parseInt(id)
     );
     setProduct(singleData);
-    const wishlist = getWishlist()
-    const isExist = wishlist.find((p) => p.product_id === product.product_id); 
-    if(isExist){
+    const wishlist = getWishlist();
+    const isExist = wishlist.find((p) => p.product_id === product.product_id);
+    if (isExist) {
       setIsWishlist(true);
     }
-  }, [data, id]);
+  }, [data, id, product.product_id]);
   const {
     product_title,
     product_image,
@@ -43,6 +44,9 @@ const ProductDetails = () => {
   } = product;
   return (
     <div className="border border-purple-600">
+      <Helmet>
+        <title>Datails | Gadget Space </title>
+      </Helmet>
       <div className=" flex flex-col items-center  w-full bg-purple-600  text-white py-6 h-[300px] relative mb-[800px] md:mb-[500px]">
         <div className="text-center">
           <Heading
@@ -119,10 +123,17 @@ const ProductDetails = () => {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <button  onClick={() => handleAddToCart(product)} className="btn bg-purple-600 text-white font-semibold border rounded-badge py-2 px-4 flex items-center gap-2">
+              <button
+                onClick={() => handleAddToCart(product)}
+                className="btn bg-purple-600 text-white font-semibold border rounded-badge py-2 px-4 flex items-center gap-2"
+              >
                 Add to Cart <BsCart3 className="text-xl " />
               </button>
-              <button disabled={isWishlist} onClick={() => handleAddToWishlist(product)} className="w-12 h-10 btn relative flex items-center text-purple-700 bg-purple-200 justify-center rounded-full border p-1">
+              <button
+                disabled={isWishlist}
+                onClick={() => handleAddToWishlist(product)}
+                className="w-12 h-10 btn relative flex items-center text-purple-700 bg-purple-200 justify-center rounded-full border p-1"
+              >
                 <FaRegHeart className="text-xl " />
               </button>
             </div>

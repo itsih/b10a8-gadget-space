@@ -39,6 +39,7 @@ const AllCarts = () => {
     removeFromCart(product);
     const remaining = getProducts();
     setCartProduct(remaining);
+    calcTotalPrice(remaining);
   };
   // Handeling sorting
   const handleSort = () => {
@@ -57,7 +58,7 @@ const AllCarts = () => {
           <button onClick={handleSort} className="text-lg text-purple-600 font-semibold hover:text-white hover:bg-purple-600 flex items-center gap-1 p-3 border border-purple-600 rounded-badge">
             Sort By Price <PiSlidersBold />
           </button>
-          <button onClick={handlePurchase} className="text-lg font-semibold text-purple-600 hover:text-white hover:bg-purple-600 border p-3 border-purple-600 rounded-badge">
+          <button  onClick={handlePurchase} className="text-lg font-semibold text-purple-600 hover:text-white hover:bg-purple-600 border p-3 border-purple-600 rounded-badge">
             Purchase
           </button>
         </div>

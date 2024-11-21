@@ -16,7 +16,7 @@ const Wishlist = () => {
   return (
     <div className="w-10/12 mx-auto mt-5">
       <div>
-        <h1>Wishlist</h1>
+        <h1 className="text-2xl font-bold">Wishlist</h1>
       </div>
       <div>
         {wishlist.map((product) => (

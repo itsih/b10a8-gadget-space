@@ -1,8 +1,30 @@
-# React + Vite
+#Gadget Space
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Live Website
+[Visit the Live Site](https://wasteful-cows.surge.sh/)
 
-Currently, two official plugins are available:
+##  Requirement Document
+[View the Requirement Document](https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+##  React Fundamentals Used
+
+1. *Components*: Each part of the project's UI has been divided into separate components.
+2. *State Management*: The useState hook has been used to share and update data between different pages.
+3. *Use Navigate*: The use Navigate hook has been used to back home page.
+4. *useEffect Hook*: It has been used for data loading and handling side effects.
+
+---
+
+##  Data Management
+
+- *Local Storage*: localStorage has been used to store data in the browser.
+
+---
+
+##  Technologies Used
+- *React*: Used React for UI creation and interactive features.
+- *React Toastify*: Clicking to add product to cart and wish will show toast notification.
+- *Local Storage*: Data has been added to local storage so that the user can save the data.
+- *CSS / Tailwind*: Used can to style the website.

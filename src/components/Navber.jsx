@@ -1,11 +1,36 @@
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa6";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Navber = () => {
+  const { pathname } = useLocation();
+
+  const isDashboard = () =>
+    pathname === "/dashboard" ||
+    pathname === "/dashboard/wishlist" ||
+    pathname === "/dashboard/cart" ||
+    /^\/product\/\d+$/.test(pathname) ||
+    pathname === "/statistics" ||
+    pathname === "/aboutus";
+
+    const isCategory = () => /^\/category\/[^/]+$/.test(pathname);
+    const isHome = () => pathname === "/";
+
   return (
-    <div className=" m-4 mb-0 border border-b-0 p-2 pb-0 rounded-tr-2xl rounded-tl-2xl">
-      <div className="bg-purple-600 rounded-t-xl py-3">
+    <div
+      className={`${
+        isDashboard()
+          ? " p-4 "
+          : "m-4 mb-0 border border-b-0 p-2 pb-0 rounded-t-2xl"
+      } 
+      ${isHome() ? "  " : ""} 
+      ${isCategory() ? "bg-white " : ""}`}
+    >
+      <div
+        className={`${
+          isDashboard() ? " bg-white" : " bg-purple-600 rounded-t-lg p-2 "
+        }`}
+      >
         <div className="w-10/12 mx-auto flex justify-between items-center ">
           <div className=" flex items-center">
             <div className="dropdown ">
@@ -16,7 +41,9 @@ const Navber = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-7 w-7 text-2xl text-white"
+                  className={`h-7 w-7 text-2xl ${
+                    isDashboard() ? "text-black" : "text-white"
+                  }`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -61,16 +88,22 @@ const Navber = () => {
             </div>
             <Link
               to="/"
-              className="btn btn-ghost text-white text-2xl font-bold"
+              className={`btn btn-ghost px-0 text-2xl font-bold ${
+                isDashboard() ? "text-black" : "text-white"
+              }`}
             >
               Gadget Space
             </Link>
           </div>
           <div className=" hidden lg:flex items-center ">
-            <ul className="menu menu-horizontal px-1 gap-4 text-base text-white font-semibold">
+            <ul
+              className={`menu menu-horizontal px-1  gap-4 text-base  font-semibold ${
+                isDashboard() ? "text-gray-800" : "text-gray-200 "
+              }`}
+            >
               <NavLink
                 className={({ isActive }) =>
-                  `${isActive ? "text-red-600" : "hover:text-red-600"}`
+                  `${isActive ? "text-white font-bold underline" : ""}`
                 }
                 to="/"
               >
@@ -78,7 +111,7 @@ const Navber = () => {
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  `${isActive ? "text-red-600" : "hover:text-red-600"}`
+                  `${isActive ? "text-purple-600 font-bold underline" : ""}`
                 }
                 to="/statistics"
               >
@@ -86,26 +119,34 @@ const Navber = () => {
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  `${isActive ? "text-red-600" : "hover:text-red-600"}`
+                  `${isActive ? "text-purple-600 font-bold underline" : ""}`
                 }
                 to="/dashboard"
               >
                 Dashboard
               </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  `${isActive ? "text-purple-600 font-bold underline" : ""}`
+                }
+                to="/aboutus"
+              >
+                About Us
+              </NavLink>
             </ul>
           </div>
           <div className=" flex">
-            <NavLink to="./dashboard/cart" className="w-10 h-10 bg-white relative mr-2 flex items-center justify-center rounded-full border p-1">
+            <NavLink
+              to="./dashboard/cart"
+              className="w-10 h-10 bg-white relative mr-2 flex items-center justify-center rounded-full border p-1"
+            >
               <BsCart3 className="text-xl " />
-              <span className="absolute -top-2 -right-2 text-sm p-1 rounded-full bg-orange-200 w-5 h-5 flex items-center justify-center">
-                0
-              </span>
             </NavLink>
-            <NavLink to="./dashboard/wishlist" className="w-10 h-10 bg-white relative flex items-center justify-center rounded-full border p-1">
+            <NavLink
+              to="./dashboard/wishlist"
+              className="w-10 h-10 bg-white relative flex items-center justify-center rounded-full border p-1"
+            >
               <FaRegHeart className="text-xl" />
-              <span className="absolute -top-2 -right-2 text-sm p-1 rounded-full bg-orange-200 w-5 h-5 flex items-center justify-center">
-                0
-              </span>
             </NavLink>
           </div>
         </div>

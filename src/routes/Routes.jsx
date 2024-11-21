@@ -8,6 +8,7 @@ import ProductDetails from "../pages/ProductDetails"
 import Error from "../components/Error"
 import AllCarts from "../components/AllCarts"
 import Wishlist from "../components/Wishlist"
+import AboutUs from "../pages/AboutUs"
 
 
 
@@ -58,6 +59,10 @@ const routes = createBrowserRouter([
  
 
           ],
+        },
+        {
+          path:'/aboutus',
+          element:<AboutUs/>
         },
         {
           path: '/gadget/:id',

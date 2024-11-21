@@ -1,10 +1,19 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import Heading from "../components/Heading";
+import { Helmet } from "react-helmet";
 
 const DashBoard = () => {
+  const { pathname } = useLocation();
+  const isDashboard = () =>
+    pathname != "/dashboard" || pathname != /^\/product\/\d+$/.test(pathname);
+
+  const isDashboardPath = pathname === "/dashboard";
   return (
     <>
       <div className="bg-purple-600 p-8 text-white flex flex-col items-center">
+        <Helmet>
+          <title>Dashboard | Gadget Space </title>
+        </Helmet>
         <Heading
           title={"Dashboard"}
           subtitle={
